@@ -1,1 +1,42 @@
+/*Configure a 3d space with perspective */
+body {
+  -webkit-perspective: 800px;
+  /*A lower pixel value creates a deeper perspective*/
+  -webkit-perspective: 400px;
+  /*A higher pixel value creates a more shallow perspective */
+  -webkit-perspective: 1200px;
 
+
+
+}
+
+.wrap {
+  transition: -webkit-transform 1s ease-in;
+}
+
+.wrap div {
+  position: absolute;
+}
+
+.side-a {
+  z-index: 100;
+}
+
+.wrap:hover {
+  /*Rotates on the horizontal x axis*/
+  -webkit-transform: rotateX(-45deg);
+  -webkit-transform: rotateX(45deg);
+  /*Rotates sideways on the vertical y axis*/
+  -webkit-transform: rotateY(-45deg);
+  /*Rotates clockwise or counter clockwise*/
+  -webkit-transform: rotateZ(65deg);
+  -webkit-transform: rotateZ(-65deg);
+
+  /*Rotate 3d sets direction in first 3 values xyz (1 = rotate, 0 = do not rotate), with degree in 4th value*/
+  -webkit-transform: rotate3d(1,1,0,65deg);
+
+
+
+
+
+}
