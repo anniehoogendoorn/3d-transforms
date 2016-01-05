@@ -14,6 +14,7 @@ body {
 
 
 
+
 }
 
 .wrap {
@@ -22,11 +23,15 @@ body {
 
 .wrap div {
   position: absolute;
+  /*Hides the backside of the div for 180deg rotation*/
+  -webkit-backface-visibility: hidden;
 }
 
 .side-a {
   z-index: 100;
+
 }
+
 
 .wrap:hover {
   /*Rotates on the horizontal x axis*/
@@ -49,8 +54,16 @@ body {
   /*The scaleZ duplicates the translateZ*/
   -webkit-transform: scaleZ(2) translateZ(100px);
 
-
-
+  /*Flips over 180deg. By default the backside is visible*/
+  -webkit-transform: rotateY(180deg);
+  /*Or if you want it to make a full circle:*/
+  /*-webkit-transform: rotateY(-1turn);*/
 
 
 }
+
+
+/*.side-b {
+  Rotates this image to it's visible
+  -webkit-transform: rotateY(-180deg);
+}*/
