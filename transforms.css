@@ -6,6 +6,12 @@ body {
   /*A higher pixel value creates a more shallow perspective */
   -webkit-perspective: 1200px;
 
+  /*Default values for perspecitive origin are x:50% y:50%*/
+  -webkit-perspective-origin: 10% 100%;
+  /*or use*/
+  -webkit-perspective-origin: center top;
+
+
 
 
 }
@@ -31,9 +37,17 @@ body {
   /*Rotates clockwise or counter clockwise*/
   -webkit-transform: rotateZ(65deg);
   -webkit-transform: rotateZ(-65deg);
-
   /*Rotate 3d sets direction in first 3 values xyz (1 = rotate, 0 = do not rotate), with degree in 4th value*/
-  -webkit-transform: rotate3d(1,1,0,65deg);
+  -webkit-transform: rotate3d(1,0,0,65deg);
+
+  /*Moves image 200px away or closer to the viewer or viewport on the z axis*/
+  -webkit-transform: translateZ(-200px);
+  -webkit-transform: translateZ(200px);
+  /*Moves image 3d in x, y and z directions*/
+  -webkit-transform: translate3d(100px, 50px, 150px);
+
+  /*The scaleZ duplicates the translateZ*/
+  -webkit-transform: scaleZ(2) translateZ(100px);
 
 
 
